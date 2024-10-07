@@ -1,0 +1,140 @@
+---
+title: 'Execise 1: R Data Types Notebook'
+output:
+  html_document:
+    df_print: paged
+---
+
+### Student Name:
+
+### Student ID:
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for practicing basic R data types, which is part of the ST2195 course at UOL and BIBF.
+Please answer the following questions by writing proper R code, and upload the completed file to a GitHub repository shared with your teacher (Github id heshaaam\@gmail.com).
+
+Prior to running the commands in R, try to figure out what you expect the result to be.You should then verify that this will indeed be the qresult by running the command in an R session. In case there is a discrepency between your expectations and the actual output make sure you understand why before you move forward. If you can not figure out how to, or which command to run you can ask your instructor or discuss the issue in class.
+
+Also note that in many cases there multiple solutions that solve the problem equally well.
+
+We do recommend to write all code in a R markdown document in R-studio as that will at the end of the course be your own R tutorial with comments and code solutions.
+
+## Cleaning Your Environment
+
+Open R-studio and make sure to set your working directory. Double check that you do not have stored objects in your current session with the following command. This will list all objects that you have in your current R session.
+
+```{r}
+ls()
+```
+
+In case you have objects that you want to remove from the current session you can do so with the rm function. NB! This command will remove all objects available in your current session.
+
+```{r}
+rm(list = ls())
+```
+
+## Basic Data Types in R
+
+1. Create variables var1 and var2 and initialize them with two integers of choice.
+Please place your answer in the available code chunks below the question.
+
+```{r}
+
+```
+
+2. Add the two variables and save them as a new variable named var3 and print the result.
+
+```{r}
+
+```
+
+3. Check the class, mode, and type for var1, var2, var3 and $\pi$ (is found under the variable name pi in R)
+
+```{r}
+
+```
+
+4. Create two character variables text1 and text2 containing any text of choice. Check mode, class, and type of the first one.
+
+```{r}
+
+```
+
+Add var1 from above to text1 and report the result.
+
+```{r}
+
+```
+
+5. Coerce or cast (force data type) var3 to integer, cast an integer variable to double, cast a string to a double.
+
+```{r}
+
+```
+
+6. Use the floor and ceiling functions to caclulate the floor and ceiling of $\pi$.
+Check whether the floor of $\pi$ is an integer?
+
+```{r}
+
+```
+
+7. Convert the ‘3.56437’ string as number.
+
+```{r}
+
+```
+
+8. Infinity (i.e. $\infty$) is written in R as \\inf . Calculate $\infty$ divided by $-\infty$.
+
+```{r}
+
+```
+
+9. Create two freely chosen complex numbers.
+```{r}
+
+```
+
+
+* Check that they are complex indeed.
+```{r}
+
+```
+
+
+* Add, multiply and divide one by another.
+```{r}
+
+```
+
+
+* Add an integer to their sum.
+```{r}
+
+```
+
+10. Multiply a logical TRUE by a logical FALSE. 
+
+Raise the logical TRUE to the 7-th power.
+
+```{r}
+
+```
+
+11. Create two character variables containing two verses of your favorite song.
+
+* concatenate the two variables,
+
+* paste the variables with ‘*’ as separator.
+
+* find if ‘and’ occurs in the second line,
+
+* substitute a word for another,
+
+* extract substring starting at the 5th character and 5 characters long.
+
+```{r}
+
+```
+
+Thank you. Please submit the finished notebook to Hesham through GitHub.
