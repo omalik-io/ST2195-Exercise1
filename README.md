@@ -1,4 +1,4 @@
-# ST2195 at BIBF Exercise 1
+# [SOLVED] ST2195 at BIBF Exercise 1
 # Basic R Data Types
 
 Please clone this repository on your machine. Solve the exercises then push it back to my GitHub account.
