@@ -5,9 +5,9 @@ output:
     df_print: paged
 ---
 
-### Student Name:
+### Student Name: Omar Malik
 
-### Student ID:
+### Student ID: 106604
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook for practicing basic R data types, which is part of the ST2195 course at UOL and BIBF.
 Please answer the following questions by writing proper R code, and upload the completed file to a GitHub repository shared with your teacher (Github id heshaaam\@gmail.com).
@@ -38,79 +38,102 @@ rm(list = ls())
 Please place your answer in the available code chunks below the question.
 
 ```{r}
-
+var1 <- as.integer(315)
+var2 <- 513L
 ```
 
 2. Add the two variables and save them as a new variable named var3 and print the result.
 
 ```{r}
-
+var3 <- var1 + var2
+print(var3)
 ```
 
 3. Check the class, mode, and type for var1, var2, var3 and $\pi$ (is found under the variable name pi in R)
 
 ```{r}
-
+cat("var1 >>> Class:",class(var1),"| Storage Mode:", storage.mode(var1), "| Type:",typeof(var1),"\n")
+cat("var2 >>> Class:",class(var2),"| Storage Mode:", storage.mode(var2), "| Type:",typeof(var2),"\n")
+cat("var3 >>> Class:",class(var3),"| Storage Mode:", storage.mode(var3), "| Type:",typeof(var3),"\n")
+cat("  pi >>> Class:",class(pi),"| Storage Mode:", storage.mode(pi), " | Type:",typeof(pi),"\n")
 ```
 
 4. Create two character variables text1 and text2 containing any text of choice. Check mode, class, and type of the first one.
 
 ```{r}
+text1 <- "They are my bulwark against the Terror"
+text2 <- "And They Shall Know No Fear"
 
+cat("text1 >>> Class:",class(text1),"| Storage Mode:", storage.mode(text1), "| Type:",typeof(text1),"\n")
 ```
 
 Add var1 from above to text1 and report the result.
 
 ```{r}
-
+paste(c(var3,text1), collapse = " ")
+print("Note: the paste() function force coerces any number to character so that it's easily added to string\n")
 ```
 
 5. Coerce or cast (force data type) var3 to integer, cast an integer variable to double, cast a string to a double.
 
 ```{r}
-
+as.integer(var3)
+as.double(var2)
+as.double(text1)
 ```
 
-6. Use the floor and ceiling functions to caclulate the floor and ceiling of $\pi$.
+6. Use the floor and ceiling functions to calculate the floor and ceiling of $\pi$.
 Check whether the floor of $\pi$ is an integer?
 
 ```{r}
-
+piFloor <- floor(pi)
+piCeiling <- ceiling(pi) 
+cat("The Floor and Ceiling results for pi are",piFloor,"and",piCeiling,"respectively.\n")
+cat("The floor of pi's type is", typeof(piFloor),"\n")
 ```
 
 7. Convert the ‘3.56437’ string as number.
 
 ```{r}
-
+text3 <- "3.56437"
+var4 <- as.numeric(text3)
 ```
 
 8. Infinity (i.e. $\infty$) is written in R as \\inf . Calculate $\infty$ divided by $-\infty$.
 
 ```{r}
-
+is.infinite(Inf)
+infin <- Inf / -Inf
+print(infin)
 ```
 
 9. Create two freely chosen complex numbers.
 ```{r}
-
+comp1 <- 873i-9
+comp2 <- -32.4i
 ```
 
 
 * Check that they are complex indeed.
 ```{r}
-
+cat("Check if the first is a complex number: ",is.complex(comp1),"\n")
+cat("Check if the second is a complex number: ",is.complex(comp2),"\n")
 ```
 
 
 * Add, multiply and divide one by another.
 ```{r}
-
+cadd <- comp1+comp2
+cmult <- comp1*comp2
+cdiv <- comp2/comp1
+cat("Complex Addition:",cadd,"\nComplex Multiplication:",cmult,"\nComplex Division:",cdiv,"\n")
 ```
 
 
 * Add an integer to their sum.
 ```{r}
-
+cadd <- cadd+933
+print(cadd)
 ```
 
 10. Multiply a logical TRUE by a logical FALSE. 
@@ -118,7 +141,12 @@ Check whether the floor of $\pi$ is an integer?
 Raise the logical TRUE to the 7-th power.
 
 ```{r}
+a <- TRUE
+b <- FALSE
 
+cat("The result of multiplying the two 'logicals' is",(a*b),". This is effectively the 'AND' operator in Logic.\n")
+
+a^7
 ```
 
 11. Create two character variables containing two verses of your favorite song.
@@ -134,6 +162,23 @@ Raise the logical TRUE to the 7-th power.
 * extract substring starting at the 5th character and 5 characters long.
 
 ```{r}
+verse1 <- "Well it's flooding down in Texas"
+verse2 <- "all of the telephone lines are down"
+
+catverses1 <- paste(verse1, verse2)
+print(catverses1)
+
+catverses2 <- paste(verse1, verse2,sep = "*")
+print(catverses2)
+
+library(stringr) 
+cat("Does the word 'and' appear in the second verse? - ",str_detect(verse2, "and"),"\n")
+
+print(sub("Texas", "Jidhafs", verse1)) 
+
+subverse <- substr(catverses1, 5, 9)
+print(subverse)
+
 
 ```
 
